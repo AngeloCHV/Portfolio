@@ -36,7 +36,7 @@
         <section class="bas">
             <div id="profil">
                 <h1>Profil</h1>
-                <p>Je me présente, Angelo Chauvin, étudiant en BUT Informatique à l'IUT de Bordeaux. Passionné par l'informatique et toutes ses pratiques, j'ai pu grâce à mes études en cours, contribuer 
+                <p>Je me présente, Angelo Chauvin, étudiant en BUT Informatique à l'IUT de Bordeaux. Passionné par l'informatique et toutes ses pratiques, j'ai pu grâce à mes études, contribuer
                     et réaliser de nombreux projets.
                 </p>
                 <p>A l'aide de ce E-Portfolio, j'ai le plaisir de vous présenter les projets que j'ai pu réaliser ainsi que les compétences acquises grâce à ces derniers. </p>
@@ -122,7 +122,7 @@
                     <div class="rendu">
                         <img id="lvl1" src="./img/JPO1.png" alt="">
                         <img src="./img/JPO2.png" alt="">
-                    </div> 
+                    </div>
                 </div>
             </div>
         </section>
@@ -139,35 +139,29 @@
                 }
             });
         });
-        // Au chargement du DOM
         document.addEventListener("DOMContentLoaded", function () {
-        // Cibler tous les liens du menu déroulant
-         const projectLinks = document.querySelectorAll('.dropdown-content a');
+        const projectLinks = document.querySelectorAll('.dropdown-content a');
 
-    projectLinks.forEach(link => {
-      link.addEventListener('click', function (e) {
-        // Attendre que le scroll soit terminé (petit délai)
-        setTimeout(() => {
-          const targetId = this.getAttribute('href').substring(1); // ex: "projet1"
-          const targetSection = document.getElementById(targetId);
+        projectLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                setTimeout(() => {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
 
-          if (targetSection) {
-            // Ferme les autres détails
-            document.querySelectorAll('.detail').forEach(detail => {
-              detail.style.display = 'none';
+                    if (targetSection) {
+                        document.querySelectorAll('.detail').forEach(detail => {
+                            detail.style.display = 'none';
+                        });
+                        const detailDiv = targetSection.querySelector('.detail');
+                        if (detailDiv) {
+                            detailDiv.style.display = 'flex';
+                            detailDiv.style.flexDirection = 'column';
+                        }
+                    }
+                }, 300);
             });
-
-            // Ouvre les détails du projet ciblé
-            const detailDiv = targetSection.querySelector('.detail');
-            if (detailDiv) {
-              detailDiv.style.display = 'flex';
-              detailDiv.style.flexDirection = 'column';
-            }
-          }
-        }, 300); // Attendre 300ms pour laisser le scroll finir
-      });
+        });
     });
-  });
     </script>
 </body>
 </html>
