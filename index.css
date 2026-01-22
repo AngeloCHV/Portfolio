@@ -146,12 +146,13 @@ nav a:hover{
 .expe{
     display: flex;
     flex-direction: column;
+    scroll-margin-top: 80px;
 }
 
 
 
 .rendu img{
-    width: 30%;
+    width: 49%;
 }
 
 h2 img {
@@ -168,11 +169,11 @@ h2 img:hover {
 }
 
 #MTA1{
-    width: 22%;
+    width: 35%;
 }
 
 #MTA2{
-    width: 40%;
+    width: 64%;
 }
 
 #BD1{
@@ -182,9 +183,14 @@ h2 img:hover {
     width: 45%;
 }
 
-#lvl1{
-    width: 36%;
+#JPO1{
+    width: 48%;
 }
+
+#JPO2{
+    width: 50%;
+}
+
 
 #comp li{
     background-color: rgb(81, 81, 139);

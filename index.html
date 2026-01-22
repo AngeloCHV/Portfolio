@@ -130,8 +130,8 @@
                     <p><strong>Compétences dévelopées :</strong> Designer un jeu éducatif, écrire des consignes claires, répondre à un besoin</p>
                     <p><strong>Rendu Graphique :</strong> </p>
                     <div class="rendu">
-                        <img id="lvl1" src="./img/JPO1.png" alt="">
-                        <img src="./img/JPO2.png" alt="">
+                        <img id="JPO1" src="./img/JPO1.png" alt="">
+                        <img id="JPO2" src="./img/JPO2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -179,7 +179,6 @@
         });
         document.addEventListener("DOMContentLoaded", function () {
         const projectLinks = document.querySelectorAll('.dropdown-content a');
-
         projectLinks.forEach(link => {
             link.addEventListener('click', function (e) {
                 setTimeout(() => {
@@ -196,7 +195,7 @@
                             detailDiv.style.flexDirection = 'column';
                         }
                     }
-                }, 300);
+                }, 0);
             });
         });
     });
